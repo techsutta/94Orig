@@ -17,6 +17,7 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "http-errors": "^1.8.0",
+    "image-downloader": "^4.0.1",
     "morgan": "^1.10.0",
     "multer": "^1.4.1",
     "node-telegram-bot-api": "^0.50.0",

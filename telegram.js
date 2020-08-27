@@ -5,6 +5,7 @@ const token = require('./config.js')[app.get('env')].telegramToken;
 const bot = new TelegramBot(token, { polling: true });
 const apiUrl = require('./config.js')[app.get('env')].url;
 const crawler = require('./crawler.js');
+const fileDownload = require('./file.js');
 
 bot.onText(/https:\/\//, async (msg, match) => {
     const chatId = msg.chat.id;
@@ -27,7 +28,9 @@ bot.onText(/https:\/\//, async (msg, match) => {
 
             for (var i = 0; i < resArr.length; i++) {
                 if (resArr[i] != '') {
-                    bot.sendMessage(chatId, resArr[i]);
+                    //let path = await fileDownload.saveFile(resArr[i]);
+                    bot.sendDocument(chatId, resArr[i]);
+                    //bot.sendDocument(chatId, path);
                 }
             }
         } else {
