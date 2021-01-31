@@ -27,13 +27,13 @@ var config = {
 
 if (process.env.NODE_ENV != 'production') {
     config.development['telegramToken'] = require('./cred.js').telegramToken;
-    config.development['insEmail'] = require('./cred.js').insEmail;
-    config.development['insPass'] = require('./cred.js').insPass;
-    config.development['insCookies'] = require('./cred.js').insCookies;
+    config.development['insEmail'] = ('./cred.js').insEmail;
+    config.development['insPass'] = ('./cred.js').insPass;
+    config.development['insCookies'] = ('./cred.js').insCookies;
     config.development['deepSite'] = require('./cred.js').deepSite;
-    config.development['lineAccessToken'] = require('./cred.js').lineAccessToken;
-    config.development['lineSecret'] = require('./cred.js').lineSecret;
-    config.development['twitterToken'] = require('./cred.js').twitterToken;
+    config.development['lineAccessToken'] = ('./cred.js').lineAccessToken;
+    config.development['lineSecret'] = ('./cred.js').lineSecret;
+    config.development['twitterToken'] = ('./cred.js').twitterToken;
 }
 
 module.exports = config;
