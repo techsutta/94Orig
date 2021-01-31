@@ -1,15 +1,12 @@
 var config = {
     development: {
         telegramToken: null,
-        insEmail: null,
-        insPass: null,
+       
         port: 3000,
-        insCookies: null,
+     
         url: 'http://127.0.0.1:3000/',
         deepSite: null,
-        lineAccessToken: null,
-        lineSecret: null,
-        twitterToken: null
+  
     },
     production: {
         telegramToken: process.env.telegramToken,
